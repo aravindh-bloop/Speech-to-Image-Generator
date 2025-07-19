@@ -4,7 +4,7 @@ Transform your **voice or text prompts into stunning AI-generated images** using
 # A perfect sppech to image generator made with stability ai. 
 # How to run it in your machine?
 * Install the packages
-* 
+* get you api keys for open ai and stability ai , and create a .env file, and make modifications in the main.py file or simply add them as environment variables. 
 
 ---
 
@@ -24,7 +24,7 @@ Transform your **voice or text prompts into stunning AI-generated images** using
 
 ### 1. Clone the Repository
 
-```bash
+bash
 git clone https://github.com/yourusername/VisualWhisper.git
 cd VisualWhisper
 2. Create a Virtual Environment (Optional but Recommended)
@@ -105,7 +105,5 @@ Built with using Python & Tkinter
 
  Contact
 Have ideas, suggestions, or bugs? Open an issue or email me at aravindhshankar.r@gmail.com
+-Aravindh
 
-Aravindh
-Copy
-Edit
