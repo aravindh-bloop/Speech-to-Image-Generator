@@ -14,6 +14,9 @@ Convert spoken words into AI-generated images using Stability AI's API.
 - [Stability AI API key](https://platform.stability.ai/)
 
 ---
+ENVIRONMENT--->
+  This projects need the api key for stability ai, hence create a .env file and add the api key in that file.
+  .env file needs to be in the same folder as in the speech to image generator is.
 
 ## **DEPLOYMENT.md**
 # Deployment Guide
