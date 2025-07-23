@@ -1,109 +1,56 @@
-#  Speech-to-Image Generator (Stability AI)
+# 🎤 Speech to Image Generator
 
-Transform your **voice or text prompts into stunning AI-generated images** using this beautiful, modern desktop app with a dark neon-themed GUI — powered by **Stability AI (SDXL)** and optionally **OpenAI** for speech-to-text.
-# A perfect sppech to image generator made with stability ai. 
-# How to run it in your machine?
-* Install the packages
-* get you api keys for open ai and stability ai , and create a .env file, and make modifications in the main.py file or simply add them as environment variables. 
+Convert spoken words into AI-generated images using Stability AI's API.
 
----
+## Features
+- Voice recording with microphone
+- Real-time speech-to-text conversion
+- AI image generation from transcribed text
+- Save generated images to disk
 
-##  Features
-
--  Record voice input and convert it into text using OpenAI Whisper
--  Enter text prompts directly
--  Generate high-quality 1024x1024 images via Stability AI's SDXL
--  Save your AI-generated masterpieces
--  Beautiful neon dark UI using Tkinter
--  Supports both voice and text-to-image workflows
--  Intelligent status updates and error handling
+## Prerequisites
+- Python 3.11+
+- Microphone (built-in or external)
+- [Stability AI API key](https://platform.stability.ai/)
 
 ---
 
-##  Installation
+## **DEPLOYMENT.md**
+# Deployment Guide
 
-### 1. Clone the Repository
+## 1. Local Setup
 
-bash
-git clone https://github.com/yourusername/VisualWhisper.git
-cd VisualWhisper
-2. Create a Virtual Environment (Optional but Recommended)
-bash
-Copy
-Edit
+### Windows/macOS/Linux
+
+# Clone repository
+git clone https://github.com/your-username/speech-to-image.git
+cd speech-to-image
+
+# Create virtual environment (recommended)
 python -m venv venv
-venv\Scripts\activate   # On Windows
-3. Install Dependencies
-bash
-Copy
-Edit
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate    # Windows
+
+# Install dependencies
 pip install -r requirements.txt
-If requirements.txt doesn't exist, manually install:
 
+# Set up environment
+echo "STABILITY_API_KEY=your_api_key_here" > .env
+2. Running the Application
 bash
-Copy
-Edit
-pip install sounddevice pillow requests openai numpy python-dotenv
- Set Your API Keys
-The app requires:
-
-Stability AI API Key for image generation
-
-(Optional) OpenAI API Key for voice-to-text transcription
-
-Create a .env file in the root directory and add:
-
-env
-Copy
-Edit
-STABILITY_AI_API_KEY=your-stability-ai-api-key
-OPENAI_API_KEY=your-openai-api-key
- Running the App
-After setting the keys:
-
+python speechtoimage.py
+3. Troubleshooting
+Error	Solution
+ModuleNotFoundError	Re-run pip install -r requirements.txt
+Microphone not found	Check sound device permissions
+API errors	Verify .env contains valid key
+4. Build Executable (Optional)
 bash
-Copy
-Edit
-python main.py
-The app window will launch with a stylish interface ready to convert your ideas into images!
+pip install pyinstaller
+pyinstaller --onefile --windowed speechtoimage.py
+# Output: dist/speechtoimage.exe
 
- Project Structure
-bash
-Copy
-Edit
-VisualWhisper/
-│
-├── audio_recorder.py         # Handles microphone input
-├── openai_client.py          # Handles speech-to-text with OpenAI
-├── stability_ai_client.py    # Handles image generation using SDXL
-├── gui_components.py         # All GUI layout and styling (neon themed)
-├── main.py                   # Entry point of the app
-├── .env                      # Your secret API keys (never commit this!)
-├── requirements.txt          # Dependencies
-└── README.md                 # This file
- Screenshots
-Add screenshots of the GUI and generated images here
 
- To-Do
- Add language translation support
 
- Add model selection dropdown
 
- Upload image history view
-
- Add theming toggle (dark / light)
-
- License
-This project is licensed under the MIT License. Feel free to fork, modify, and share!
-
- Credits
-Stability AI — Image generation
-
-OpenAI — Speech-to-text (Whisper)
-
-Built with using Python & Tkinter
-
- Contact
-Have ideas, suggestions, or bugs? Open an issue or email me at aravindhshankar.r@gmail.com
--Aravindh
 
